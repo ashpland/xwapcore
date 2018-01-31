@@ -9,7 +9,7 @@
 import Foundation
 
 
-let sampleInput = "Example text Is \nfor all purposes"
+let sampleInput = "Example text Is \nfor all 🌊 purposes"
 
 print(xwap.transform(sampleInput, by: xwap.funcs.exclaim))
 print(xwap.transform(sampleInput, by: xwap.funcs.question))

@@ -24,8 +24,6 @@ class xwap {
         return theInput + "?"
     }
     
-    
-    
     let spatious: (String) -> String = {
         inputString in
         
@@ -63,7 +61,6 @@ class xwap {
                 word in
                 
                 var bounceWord = ""
-                
                 for (index, character) in word.enumerated(){
                     let indexIsEven = (index % 2 == 0)
                     
@@ -74,14 +71,8 @@ class xwap {
                         bounceWord = bounceWord + String(character).uppercased()
                     }
                 }
-                
                 return bounceWord
-                
-                
             })
         return bounceWords.joined(separator: " ")
     }
-    
-   
 }
-
