@@ -24,11 +24,45 @@ class xwap {
         return theInput + "?"
     }
     
+    
+    
     let spatious: (String) -> String = {
         inputString in
-        return String(inputString.flatMap({return String($0) + " "}))
+        
+        
+        
+        return inputString.flatMap({
+            (currentCharacter) -> String? in
+            
+            let curCharString = String(currentCharacter)
+            
+            switch curCharString {
+                case "\n":
+                    return curCharString
+                default:
+                    return curCharString + " "
+            }
+        }).reduce("", +)
     }
     
+    let hashtag: (String) -> String = {
+        inputString in
+        
+        let camelCase:[String] = inputString.components(separatedBy: CharacterSet.whitespacesAndNewlines)
+            .map({
+                word in
+                return word.prefix(1).uppercased() + word.dropFirst()
+            })
+        
+        return "#" + camelCase.joined()
+        
+        
+    
+        
+        
+        
+        
+    }
     
 }
 
