@@ -8,5 +8,7 @@
 
 import Foundation
 
-print("Hello, World!")
 
+let inputString = "Example text"
+
+print(xwap.transform(inputString, by: xwap.funcs.exclaim))
