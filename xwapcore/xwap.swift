@@ -29,8 +29,6 @@ class xwap {
     let spatious: (String) -> String = {
         inputString in
         
-        
-        
         return inputString.flatMap({
             (currentCharacter) -> String? in
             
@@ -55,14 +53,35 @@ class xwap {
             })
         
         return "#" + camelCase.joined()
-        
-        
-    
-        
-        
-        
-        
     }
     
+    let bounceCase: (String) -> String = {
+        inputString in
+        
+        let bounceWords:[String] = inputString.components(separatedBy: CharacterSet.whitespaces)
+            .map({
+                word in
+                
+                var bounceWord = ""
+                
+                for (index, character) in word.enumerated(){
+                    let indexIsEven = (index % 2 == 0)
+                    
+                    if indexIsEven {
+                        bounceWord = bounceWord + String(character).lowercased()
+                    }
+                    else {
+                        bounceWord = bounceWord + String(character).uppercased()
+                    }
+                }
+                
+                return bounceWord
+                
+                
+            })
+        return bounceWords.joined(separator: " ")
+    }
+    
+   
 }
 

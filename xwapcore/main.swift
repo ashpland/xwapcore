@@ -15,4 +15,5 @@ print(xwap.transform(sampleInput, by: xwap.funcs.exclaim))
 print(xwap.transform(sampleInput, by: xwap.funcs.question))
 print(xwap.transform(sampleInput, by: xwap.funcs.spatious))
 print(xwap.transform(sampleInput, by: xwap.funcs.hashtag))
+print(xwap.transform(sampleInput, by: xwap.funcs.bounceCase))
 
