@@ -9,6 +9,9 @@
 import Foundation
 
 
-let inputString = "Example text"
+let sampleInput = "Example text"
 
-print(xwap.transform(inputString, by: xwap.funcs.exclaim))
+print(xwap.transform(sampleInput, by: xwap.funcs.exclaim))
+print(xwap.transform(sampleInput, by: xwap.funcs.question))
+print(xwap.transform(sampleInput, by: xwap.funcs.spatious))
+

@@ -19,5 +19,16 @@ class xwap {
     
     let exclaim: (String) -> String = {return $0 + "!"}
     
+    let question: (String) -> String = {
+        theInput in
+        return theInput + "?"
+    }
+    
+    let spatious: (String) -> String = {
+        inputString in
+        return String(inputString.flatMap({return String($0) + " "}))
+    }
+    
     
 }
+
